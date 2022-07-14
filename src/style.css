@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#container {
+    width: 550px;
+
+}
+
+.chat {
+    display: grid;
+    grid-template-rows: 1fr, 10fr, 1fr;
+    height: 100vh;
+    grid-template-areas:
+        "menu"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "footer"
+    ;
+    background-color: aquamarine;
+}
+
+.chat_menu {
+    grid-area: menu;
+    background-color: brown;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.sub_menu1 {
+    background-color: bisque;
+}
+
+.sub_menu3 {
+    background-color: blueviolet;
+}
+
+
+.chat_main {
+    grid-area: main;
+    display: grid;
+    row-gap: 3px;
+    grid-auto-flow: row ;
+    grid-auto-rows: 100px;
+    grid-template-rows: unset;
+    overflow-y:scroll;
+}
+
+.chat_main::-webkit-scrollbar {
+    display: none;
+}
+
+.chat_item{
+    background-color:darkgray;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.chat_footer {
+    grid-area: footer;
+    background-color: cornflowerblue;
+}
